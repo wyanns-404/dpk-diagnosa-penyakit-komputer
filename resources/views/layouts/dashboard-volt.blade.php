@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>Volt - Free Bootstrap 5 Dashboard</title>
+    <title>DPK - Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
     <meta name="author" content="Themesberg">
@@ -123,7 +123,7 @@
                             <img src="{{ asset('volt/html&css/assets/img/brand/light.svg') }}" height="20"
                                 width="20" alt="Volt Logo">
                         </span>
-                        <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
+                        <strong class="mt-1 ms-1 sidebar-text">DPK</strong>
                     </a>
                 </li>
 
@@ -140,35 +140,52 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
-               
-                   
-                <li class="nav-item ">
-                    <a href="../../pages/settings.html" class="nav-link">
+
+                <li class="nav-item 
+                {{ Request::is('gejala') ?'active' : '' }}
+                ">
+                    <a href="{{ route('gejala.index') }}" class="nav-link ">
                         <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8 16c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1Zm0 0v-4m0 5v.007M20 5c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2ZM12 17c0 2.21-1.791 4-4 4s-4-1.79-4-4c0-1.015.378-1.941 1-2.646V6c0-1.657 1.343-3 3-3s3 1.343 3 3v8.354c.622.705 1 1.631 1 2.646Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>                            
                         </span>
-                        <span class="sidebar-text">Settings</span>
+                        <span class="sidebar-text">Gejala</span>
                     </a>
                 </li>
 
                 <li class="nav-item 
-                {{ Request::is('simple-map') ?'active' : '' }}
+                {{ Request::is('kerusakan') ?'active' : '' }}
                 ">
-                    <a href="" class="nav-link ">
+                    <a href="{{ route('kerusakan.index') }}" class="nav-link ">
                         <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 20C9.47362 20 7.22075 18.8289 5.75463 17M12 4C14.9611 4 17.5465 5.60879 18.9297 8M4 12C4 9.47362 5.17107 7.22075 7 5.75463M20 12C20 14.8339 18.5265 17.3236 16.3039 18.7448M19.3 5V8H16.3M8 16.3H5V19.3M16.3 16V19H19.3M4.7002 5H7.7002V8"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>                            
+                        </span>
+                        <span class="sidebar-text">Kerusakan</span>
+                    </a>
+                </li>
+
+                <li class="nav-item 
+                {{ Request::is('pengetahuan') ?'active' : '' }}
+                ">
+                    <a href="{{ route('pengetahuan.index') }}" class="nav-link ">
+                        <span class="sidebar-icon">
+                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>                            
                         </span>
-                        <span class="sidebar-text">Simple Map</span>
+                        <span class="sidebar-text">Basis Pengetahuan</span>
                     </a>
                 </li>
                 <!--SIDEBAR MENU-->
@@ -484,13 +501,12 @@
 
         <!--DISPLAY CONTENT-->
         <div class="row">
-           
             @yield('content')
         </div>
         <!--DISPLAY CONTENT-->
 
         
-        <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
+        {{-- <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
             <div class="row">
                 <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
                     <p class="mb-0 text-center text-lg-start">© 2019-<span class="current-year"></span> <a
@@ -515,7 +531,7 @@
                     </ul>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
     </main>
 
     <!-- Core -->
@@ -532,7 +548,7 @@
     <script src="{{ asset('volt/html&css/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
 
     <!-- Charts -->
-    
+
 
     <!-- Datepicker -->
     <script src="{{ asset('volt/html&css/vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script>
@@ -555,6 +571,16 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500,0).slideUp(500,function(){
+                $(this).remove()
+            })
+        }, 3000);
+    </script>
     @stack('javascript')
     <!-- Volt JS -->
     {{-- <script src="{{ asset('volt/hmtl&css/assets/js/volt.js') }}"></script> --}}
