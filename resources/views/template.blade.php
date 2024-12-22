@@ -41,9 +41,7 @@
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
                 <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                    <a class="mx-2" href="https://github.com/wyanns-404/dpk-diagnosa-penyakit-komputer/"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
